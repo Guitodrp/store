@@ -3,18 +3,24 @@ import React from 'react';
 function Footer() {
     return (
         <footer style={styles.footer}>
-            <p>© 2025 Store. Todos os direitos reservados.</p>
+            <p style={styles.text}>© 2025 Store. Todos os direitos reservados.</p>
         </footer>
     );
 }
 
 const styles = {
     footer: {
-        padding: '20px',
+        background: 'linear-gradient(to right, #f0f2f5, #ffffff)',
+        borderTop: '1px solid #e2e8f0',
         textAlign: 'center',
-        backgroundColor: '#f1f1f1',
+        padding: '30px 20px',
         marginTop: '40px',
     },
+    text: {
+        color: '#4a5568',
+        margin: 0,
+        fontSize: '14px',
+    }
 };
 
 export default Footer;

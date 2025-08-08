@@ -1,11 +1,17 @@
-import React from 'react';
+import Flex from '../components/Flex';
+import Title from '../components/Title';
+import Paragraph from '../components/Paragraph';
 
 function AboutUs() {
     return (
-        <div style={{ padding: '40px' }}>
-            <h2>About Us</h2>
-            <p>Em breve: conheça mais sobre nossa loja.</p>
-        </div>
+        <Flex>
+            <Flex>
+                <Title>Sobre Nós</Title>
+            </Flex>
+            <Flex>
+                <Paragraph>Em breve: conheça mais sobre nossa loja.</Paragraph>
+            </Flex>
+        </Flex>
     );
 }
 

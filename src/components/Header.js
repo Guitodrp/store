@@ -1,16 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Flex from './Flex';
 import HeaderButton from './HeaderButton';
 
 function Header() {
   return (
     <Flex justify="space-between" align="center" style={styles.container}>
-      <h2 style={styles.logo}>Store</h2>
+      <Link to="/" style={styles.logoContainer}>
+        <img src="/images/store.png" alt="Logo" style={styles.logoImage} />
+        <h1 style={styles.storeName}>Store</h1>
+      </Link>
 
-      <Flex gap="12px">
-        <HeaderButton to="/">Home</HeaderButton>
-        <HeaderButton to="/checkout">Checkout</HeaderButton>
-        <HeaderButton to="/about">About Us</HeaderButton>
+      <Flex gap="12px" style={{ marginLeft: '80px' }}>
+        <HeaderButton to="/">Início</HeaderButton>
+        <HeaderButton to="/checkout">Carrinho</HeaderButton>
+        <HeaderButton to="/about">Sobre Nós</HeaderButton>
       </Flex>
     </Flex>
   );
@@ -25,9 +29,21 @@ const styles = {
     top: 0,
     zIndex: 10,
   },
-  logo: {
-    margin: 0,
+  logoContainer: {
+    display: 'flex',
+    alignItems: 'center',
+    textDecoration: 'none',
+  },
+  logoImage: {
+    height: '60px',
+    objectfit: 'contain',
+    marginRight: '12px',
+  },
+  storeName: {
+    fontSize: '35px',
     fontWeight: 'bold',
+    color: '#2c3e50',
+    margin: 0,
   },
 };
 

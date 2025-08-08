@@ -67,6 +67,7 @@ const styles = {
     price: {
         margin: '8px 0',
         fontWeight: '500',
+        fontSize: '18px',
         color: '#555',
     },
     link: {
